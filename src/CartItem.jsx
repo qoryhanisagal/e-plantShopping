@@ -9,7 +9,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
-    return cart.reduce((total, item) => total + item.quantity * item.price, 0);
+    return cart.reduce((total, item) => total + item.quantity * item.cost, 0);
   };
 
   // Handle continue shopping button click
@@ -39,7 +39,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total cost for a single item based on its quantity
   const calculateTotalCost = (item) => {
-    return item.quantity * item.price;
+    return item.quantity * item.cost;
   };
 
   return (
@@ -51,7 +51,7 @@ const CartItem = ({ onContinueShopping }) => {
             <img className="cart-item-image" src={item.image} alt={item.name} />
             <div className="cart-item-details">
               <div className="cart-item-name">{item.name}</div>
-              <div className="cart-item-cost">${item.price}</div>
+              <div className="cart-item-cost">${item.cost}</div>
               <div className="cart-item-quantity">
                 <button 
                   className="cart-item-button cart-item-button-dec" 
