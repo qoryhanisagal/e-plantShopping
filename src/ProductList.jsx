@@ -301,6 +301,10 @@ function ProductList() {
                                 </label>
                             </h1>
                         </a>
+                        {/* Show the badge if totalQuantity is greater than 0 */}
+                        {totalQuantity > 0 && (
+                            <span className="cart-quantity-badge">{totalQuantity}</span>
+                        )}
                     </div>
                 </div>
             </div>
