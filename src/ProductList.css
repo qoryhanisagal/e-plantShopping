@@ -14,7 +14,8 @@ body {
 .navbar {
     background-color: #4CAF50;
     color: #fff!important;
-    padding: 15px;
+    padding: 10px; /* Adjust padding */
+    height: 50px; /* Adjust height */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,37 +42,31 @@ body {
 
 /* Product Grid */
 .product-grid {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    width: 100vw;
     align-items: center;
-    justify-content: center;
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto;
+    padding: 20px;
 }
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    /* background-color: pink; */
-    /* justify-content: space-between; */
-    padding: 20px;
-    width: 100%;
-    align-items: center;
+    gap: 30px;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
-    margin-bottom: 20px;
-    padding: 20px;
+    width: 300px; /* Adjust width for consistency */
+    padding: 15px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
-    position: relative;
-    
-    gap: 20px;
 }
 
 /* Pseudo-classes - Hover effect on product button */
@@ -94,7 +89,7 @@ body {
 
 .product-image {
     max-width: 100%;
-    height: 200px; /* Adjust height for better consistency */
+    height: auto; /* Adjust height for better consistency */
 }
 
 .product-button {
@@ -190,11 +185,17 @@ body {
 }
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .product-card {
-        flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on smaller screens */
-        max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on smaller screens */
+        width: 90%; /* Make product cards take up more space on smaller screens */
+        margin: 10px auto;
     }
 }
+
 /* ProductList.css */
 
 .product-button {
